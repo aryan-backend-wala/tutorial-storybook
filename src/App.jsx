@@ -1,7 +1,14 @@
-import TaskList from "./components/TaskList";
+import './index.css';
+import store from './lib/store.js';
 
-export default function App(){
-  return (
-    <TaskList />
-  );
+import { Provider } from 'react-redux';
+import InboxScreen from './components/InboxScreen.jsx';
+
+function App() {
+ return (
+  <Provider store={store}>
+    <InboxScreen />
+  </Provider>
+ );
 }
+export default App;
